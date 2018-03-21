@@ -51,7 +51,7 @@ COCOMO（constructive cost model），构造性成本模型。它是一种精确
 * 阅读《现代软件工程》的 PSP: Personal Software Process 章节。 http://www.cnblogs.com/xinz/archive/2011/11/27/2265425.html
 * 按表格 PSP 2.1， 了解一个软件工程师在接到一个任务之后要做什么，需要哪些技能，解释你打算如何统计每项数据？ （期末考核，每人按开发阶段提交这个表）
 
-![PSPTable](https://github.com/8652/8652.github.io/blob/master/media/image/HW1.PNG)
+![PSPTable](https://s1.ax1x.com/2018/03/21/97Ei0f.png)
 
 >* 记录项目的大小
 计算代码的行数
