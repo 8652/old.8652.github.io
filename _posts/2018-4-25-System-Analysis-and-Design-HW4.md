@@ -29,6 +29,7 @@ tags: 系统分析与设计作业
 根据数据逻辑模型可以用工具导出物理模型：
 ![](https://s1.ax1x.com/2018/04/25/C1iatO.png)
 得到追踪的Mysql脚本：
+
 ```sql
 drop table if exists CreditCard;
 
