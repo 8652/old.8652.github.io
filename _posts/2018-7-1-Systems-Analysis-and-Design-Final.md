@@ -31,14 +31,17 @@ tags: 系统分析与设计作业
 |    Discussion    |     团队决定项目方向       |   10     | 
 |**Development** |   **开发**                       |   90     |   
 |Analysis        |   需求分析 (包括学习新技术)        |   10     |
-|Design Spec     |   生成设计文档                    |   10     | 
+|Design Spec     |   生成设计文档                    |   7     | 
+|Design Review	 |设计复审（和同事审核设计文档）	    |   3      |
 |Coding Standard |   代码规范 (为目前的开发制定合适的规范)|   5   | 
 |Design          |   具体设计                        |   10     | 
 |Coding          |   具体编码                        |   20      | 
 |Code Review     |   代码复审                        |   10      | 
-|Test            |   测试（自我测试，修改代码，提交修改）|   15    |  
-|**Reporting**   |   **报告**                       |   10      |   
-|Postmortem & Process Improvement Plan|事后总结, 并提出过程改进计划| |
+|Test            |   测试（自我测试，修改代码，提交修改）|   20    |  
+|**Reporting**   |   **报告**                       |   5      | 
+|Test Report	 |测试报告	                         | 0 |
+|Size Measurement|计算工作量	| 1 |
+|Postmortem & Process Improvement Plan|事后总结，并提出过程改进计划 |	4|
 |**Summary**     |   **合计**                       |   100     |
 
 
