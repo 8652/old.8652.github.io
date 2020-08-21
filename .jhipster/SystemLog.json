@@ -86,6 +86,7 @@
   "fluentMethods": true,
   "readOnly": false,
   "embedded": false,
-  "clientRootFolder": "",
-  "applications": ["bigdataBusiness"]
+  "clientRootFolder": "bigdataBusiness",
+  "applications": ["bigdataBusiness"],
+  "microserviceName": "bigdataBusiness"
 }
