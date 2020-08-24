@@ -26,7 +26,7 @@ entity PairContract {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 协议名称
      */
@@ -125,7 +125,7 @@ entity PairContractFile {
     /**
      * 主键id
      */
-    pkid UUID maxlength(40)
+    pkid UUID
     /**
      * 开放利用协议id
      */
@@ -156,7 +156,7 @@ entity BizItem {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 业务事项编码
      */
@@ -231,7 +231,7 @@ entity BizItemInfoRes {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 业务事项id
      */
@@ -310,7 +310,7 @@ entity AuthLetterTemplate {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 业务事项id
      */
@@ -381,7 +381,7 @@ entity AuthLetterRecord {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 业务事项id
      */
@@ -500,7 +500,7 @@ entity BigInterfaceList {
     /** 
      * 主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/** 
      * 服务接口接口编码
      */
@@ -620,7 +620,7 @@ entity BigInterfaceBiz {
     /**
      *   主键
      */   
-    pkid UUID maxlength(40)
+    pkid UUID
     /**
      *   大数据接口id
      */   
@@ -676,7 +676,7 @@ entity BigInterfaceLog {
     /**
      *   主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
     /**
      *   应用接入账号
      */
@@ -748,7 +748,7 @@ entity SystemLog {
      *   
      *   主键
      */
-    pkid UUID maxlength(40)
+    pkid UUID
 	/**
      *   操作人姓名
      */
