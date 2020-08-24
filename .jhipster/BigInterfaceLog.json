@@ -1,0 +1,132 @@
+{
+  "name": "BigInterfaceLog",
+  "fields": [
+    {
+      "fieldName": "pkid",
+      "fieldType": "String",
+      "javadoc": "主键",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "appKey",
+      "fieldType": "String",
+      "javadoc": "应用接入账号",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "consumerName",
+      "fieldType": "String",
+      "javadoc": "数据接入方",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "interfaceId",
+      "fieldType": "String",
+      "javadoc": "接口id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "interfaceCode",
+      "fieldType": "String",
+      "javadoc": "服务接口接口编码",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "interfaceName",
+      "fieldType": "String",
+      "javadoc": "服务接口名字",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "dataProvIds",
+      "fieldType": "String",
+      "javadoc": "数据提供方编码（列表，以逗号间隔）",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "300"
+    },
+    {
+      "fieldName": "useTime",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "接口调用时间"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "javadoc": "接口调用状态",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "interfacePath",
+      "fieldType": "String",
+      "javadoc": "本地接口路径",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "globalUniqueId",
+      "fieldType": "String",
+      "javadoc": "全局唯一id",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "delFlag",
+      "fieldType": "Boolean",
+      "javadoc": "逻辑删除标志位,false：未删除；true：已删除",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "创建时间"
+    },
+    {
+      "fieldName": "createById",
+      "fieldType": "String",
+      "javadoc": "创建人id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "createByName",
+      "fieldType": "String",
+      "javadoc": "创建人姓名",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    },
+    {
+      "fieldName": "createByOrgId",
+      "fieldType": "String",
+      "javadoc": "创建人组织id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "createByOrgName",
+      "fieldType": "String",
+      "javadoc": "创建人组织名称",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200824024435",
+  "javadoc": "@Description: 数据调用记录表\\n@Version: V1.0",
+  "entityTableName": "big_interface_log",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["bigdataBusiness"]
+}

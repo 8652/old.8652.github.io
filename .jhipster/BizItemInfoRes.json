@@ -1,0 +1,139 @@
+{
+  "name": "BizItemInfoRes",
+  "fields": [
+    {
+      "fieldName": "pkid",
+      "fieldType": "String",
+      "javadoc": "主键",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "bizItemId",
+      "fieldType": "String",
+      "javadoc": "业务事项id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "originDep",
+      "fieldType": "String",
+      "javadoc": "数源部门",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "categoryName",
+      "fieldType": "String",
+      "javadoc": "信息类名称",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "categoryCode",
+      "fieldType": "String",
+      "javadoc": "信息类编码",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "termName",
+      "fieldType": "String",
+      "javadoc": "信息项名称",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "termCode",
+      "fieldType": "String",
+      "javadoc": "信息项编码",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "shareType",
+      "fieldType": "String",
+      "javadoc": "共享类型",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "openAttr",
+      "fieldType": "String",
+      "javadoc": "开放属性",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "delFlag",
+      "fieldType": "Boolean",
+      "javadoc": "逻辑删除标志位,false：未删除；true：已删除",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "创建时间"
+    },
+    {
+      "fieldName": "createById",
+      "fieldType": "String",
+      "javadoc": "创建人id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "createByName",
+      "fieldType": "String",
+      "javadoc": "创建人姓名",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    },
+    {
+      "fieldName": "createByOrgId",
+      "fieldType": "String",
+      "javadoc": "创建人组织id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "createByOrgName",
+      "fieldType": "String",
+      "javadoc": "创建人组织名称",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    },
+    {
+      "fieldName": "lastUpTime",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "最后更新时间"
+    },
+    {
+      "fieldName": "lastUpId",
+      "fieldType": "String",
+      "javadoc": "最后更新人id",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "lastUpName",
+      "fieldType": "String",
+      "javadoc": "最后更新人姓名",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "80"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200824023935",
+  "javadoc": "@Description: 业务事项—信息资源信息\\n@Version: V1.0",
+  "entityTableName": "biz_item_info_res",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["bigdataBusiness"]
+}
