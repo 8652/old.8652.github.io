@@ -1,0 +1,98 @@
+{
+  "name": "SystemLog",
+  "fields": [
+    {
+      "fieldName": "pkid",
+      "fieldType": "String",
+      "javadoc": "主键",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "operatorName",
+      "fieldType": "String",
+      "javadoc": "操作人姓名",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "operatorId",
+      "fieldType": "String",
+      "javadoc": "操作人id",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "operatorDeptName",
+      "fieldType": "String",
+      "javadoc": "操作人组织名称",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "operatorDeptId",
+      "fieldType": "String",
+      "javadoc": "操作人组织id",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "operateTime",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "操作时间"
+    },
+    {
+      "fieldName": "operateType",
+      "fieldType": "String",
+      "javadoc": "操作类型",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "javadoc": "操作内容",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "memo",
+      "fieldType": "String",
+      "javadoc": "备注",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "opreateParams",
+      "fieldType": "String",
+      "javadoc": "接口参数json串",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "globalUniqueId",
+      "fieldType": "String",
+      "javadoc": "全局唯一id",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "40"
+    },
+    {
+      "fieldName": "delFlag",
+      "fieldType": "Boolean",
+      "javadoc": "逻辑删除标志位,false：未删除；true：已删除",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200824024535",
+  "entityTableName": "system_log",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["bigdataBusiness"]
+}
