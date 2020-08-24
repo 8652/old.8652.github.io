@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+        <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity AuthLetterRecord.
+    -->
+    <changeSet id="20200824025932-1" author="jhipster">
+        <createTable tableName="auth_letter_record" remarks="@Description: 授权书记录\n@Version: V1.0">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="pkid" type="${uuidType}" remarks="主键">
+                <constraints nullable="true" />
+            </column>
+            <column name="biz_item_id" type="varchar(40)" remarks="业务事项id">
+                <constraints nullable="false" />
+            </column>
+            <column name="pair_contract_id" type="varchar(40)" remarks="开放利用协议(双方授权协议)id">
+                <constraints nullable="false" />
+            </column>
+            <column name="pair_contract_name" type="varchar(40)" remarks="开放利用协议(双方授权协议)名称">
+                <constraints nullable="false" />
+            </column>
+            <column name="template_id" type="varchar(40)" remarks="模板id">
+                <constraints nullable="true" />
+            </column>
+            <column name="template_name" type="varchar(50)" remarks="模板名称">
+                <constraints nullable="true" />
+            </column>
+            <column name="template_type" type="varchar(10)" remarks="模板类型，PERSON：个人；COMPANY：企业">
+                <constraints nullable="true" />
+            </column>
+            <column name="file_path" type="varchar(200)" remarks="未授权文件路径">
+                <constraints nullable="true" />
+            </column>
+            <column name="auth_file_id" type="varchar(50)" remarks="授权文件id">
+                <constraints nullable="true" />
+            </column>
+            <column name="auth_time" type="datetime" remarks="授权时间">
+                <constraints nullable="true" />
+            </column>
+            <column name="auth_status" type="varchar(10)" remarks="授权状态">
+                <constraints nullable="true" />
+            </column>
+            <column name="person_id" type="varchar(50)" remarks="授权人id">
+                <constraints nullable="true" />
+            </column>
+            <column name="person_name" type="varchar(20)" remarks="授权人名称">
+                <constraints nullable="true" />
+            </column>
+            <column name="person_id_card" type="varchar(50)" remarks="授权人身份证号">
+                <constraints nullable="true" />
+            </column>
+            <column name="person_phone" type="varchar(11)" remarks="授权人手机号">
+                <constraints nullable="true" />
+            </column>
+            <column name="company_name" type="varchar(50)" remarks="企业名称">
+                <constraints nullable="true" />
+            </column>
+            <column name="company_social_code" type="varchar(50)" remarks="企业统一社会信用代码">
+                <constraints nullable="true" />
+            </column>
+            <column name="auth_channel" type="varchar(10)" remarks="授权触点（渠道）">
+                <constraints nullable="true" />
+            </column>
+            <column name="auth_origin" type="varchar(20)" remarks="来源">
+                <constraints nullable="true" />
+            </column>
+            <column name="del_flag" type="boolean" remarks="逻辑删除标志位,false：未删除；true：已删除">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_time" type="datetime" remarks="创建时间">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_by_id" type="varchar(40)" remarks="创建人id">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_by_name" type="varchar(80)" remarks="创建人姓名">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_by_org_id" type="varchar(40)" remarks="创建人组织id">
+                <constraints nullable="false" />
+            </column>
+            <column name="create_by_org_name" type="varchar(80)" remarks="创建人组织名称">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_up_time" type="datetime" remarks="最后更新时间">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_up_id" type="varchar(40)" remarks="最后更新人id">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_up_name" type="varchar(80)" remarks="最后更新人姓名">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="auth_letter_record" columnName="auth_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="auth_letter_record" columnName="create_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="auth_letter_record" columnName="last_up_time" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20200824025932-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20200824025932-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/auth_letter_record.csv"
+                  separator=";"
+                  tableName="auth_letter_record">
+            <column name="id" type="numeric"/>
+            <column name="pkid" type="string"/>
+            <column name="biz_item_id" type="string"/>
+            <column name="pair_contract_id" type="string"/>
+            <column name="pair_contract_name" type="string"/>
+            <column name="template_id" type="string"/>
+            <column name="template_name" type="string"/>
+            <column name="template_type" type="string"/>
+            <column name="file_path" type="string"/>
+            <column name="auth_file_id" type="string"/>
+            <column name="auth_time" type="datetime"/>
+            <column name="auth_status" type="string"/>
+            <column name="person_id" type="string"/>
+            <column name="person_name" type="string"/>
+            <column name="person_id_card" type="string"/>
+            <column name="person_phone" type="string"/>
+            <column name="company_name" type="string"/>
+            <column name="company_social_code" type="string"/>
+            <column name="auth_channel" type="string"/>
+            <column name="auth_origin" type="string"/>
+            <column name="del_flag" type="boolean"/>
+            <column name="create_time" type="datetime"/>
+            <column name="create_by_id" type="string"/>
+            <column name="create_by_name" type="string"/>
+            <column name="create_by_org_id" type="string"/>
+            <column name="create_by_org_name" type="string"/>
+            <column name="last_up_time" type="datetime"/>
+            <column name="last_up_id" type="string"/>
+            <column name="last_up_name" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
